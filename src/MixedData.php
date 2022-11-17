@@ -1,5 +1,5 @@
 <?php
-namespace topshelfcraft\MixedData;
+namespace TopShelfCraft\MixedData;
 
 use craft\base\Plugin;
 use craft\services\Fields;
@@ -9,20 +9,11 @@ use yii\base\Event;
 class MixedData extends Plugin
 {
 
-	/**
-	 * @var bool
-	 */
-	public $hasCpSection = false;
+	public bool $hasCpSection = false;
 
-    /**
-     * @var bool
-     */
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
-	/**
-	 * @var string
-	 */
-	public $schemaVersion = '3.0.0';
+	public string $schemaVersion = '3.0.0';
 
     public function init()
     {

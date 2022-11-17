@@ -2,16 +2,17 @@
     "name": "topshelfcraft/mixed-data",
     "description": "A simple JSON-backed field for storing mixed data.",
     "type": "craft-plugin",
-    "version": "3.0.0-beta.1",
+    "version": "4.0.0-beta.1",
     "keywords": [
         "craft",
         "craftcms",
         "craft-plugin",
         "mixed",
+        "data",
         "json"
     ],
     "support": {
-        "issues": "https://github.com/topshelfcraft/mixed/issues"
+        "issues": "https://github.com/TopShelfCraft/Mixed-Data/issues"
     },
     "license": "proprietary",
     "authors": [
@@ -21,17 +22,16 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "craftcms/cms": "^3.2.0"
+        "craftcms/cms": "^4.2"
     },
     "autoload": {
         "psr-4": {
-          "topshelfcraft\\MixedData\\": "src/"
+          "TopShelfCraft\\MixedData\\": "src/"
         }
     },
     "extra": {
-        "class": "topshelfcraft\\MixedData\\MixedData",
-        "handle": "mixed",
-        "name": "Mixed Data"
+        "class": "TopShelfCraft\\MixedData\\MixedData",
+        "handle": "mixed-data",
+        "name": "Mixed Data (JSON-backed fields)"
     }
 }

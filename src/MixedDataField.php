@@ -1,7 +1,6 @@
 <?php
-namespace topshelfcraft\MixedData;
+namespace TopShelfCraft\MixedData;
 
-use Craft;
 use craft\base\ElementInterface;
 use craft\base\Field;
 use craft\helpers\Json;
@@ -37,7 +36,7 @@ class MixedDataField extends Field
      *
      * @return string The prepared field value
      */
-    public function normalizeValue($value, ElementInterface $element = null)
+    public function normalizeValue($value, ElementInterface $element = null): mixed
     {
     	return Json::decodeIfJson($value);
     }
@@ -48,12 +47,12 @@ class MixedDataField extends Field
      * Data types that are JSON-encodable are safe (arrays, integers, strings, booleans, etc).
      * Whatever this returns should be something [[normalizeValue()]] can handle.
      *
-     * @param mixed $value The raw field value
+     * @param MixedData $value The raw field value
      * @param ElementInterface|null $element The element the field is associated with, if there is one
 	 *
      * @return string The serialized field value
      */
-    public function serializeValue($value, ElementInterface $element = null)
+    public function serializeValue($value, ElementInterface $element = null): string
     {
         return Json::encode($value);
     }
@@ -61,7 +60,7 @@ class MixedDataField extends Field
     /**
      * Returns the field’s input HTML.
      *
-     * @param mixed $value The field’s value. This will either be the [[normalizeValue() normalized value]],
+     * @param MixedData $value The field’s value. This will either be the [[normalizeValue() normalized value]],
 	 *     raw POST data (i.e. if there was a validation error), or null
      * @param ElementInterface|null $element The element the field is associated with, if there is one
      *
